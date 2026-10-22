@@ -22,6 +22,3 @@ AIPA Productivity is an AI-powered productivity website designed to help users m
 1. Open the live website: https://aipa-productivity.lovable.app
 2. To view or continue developing the project, open it in the Lovable editor.
 3. To access the source code, visit the GitHub repository.
-
-## Development
-This project was built using Lovable. Changes made through Lovable are synchronised with the connected GitHub repository.
