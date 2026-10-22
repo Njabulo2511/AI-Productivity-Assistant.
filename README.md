@@ -14,17 +14,14 @@ AIPA Productivity is an AI-powered productivity website designed to help users m
 - Task and Deadline Overview
 
 ## Tools Used
-- Lovable
-- GitHub
-- AI integration
-- Node.js and npm
+- **Lovable** — Used to build the website.
+- **ChatGPT** — Used for planning, ideas, and prompting.
+- **GitHub** — Used to store and manage the project repository.
 
 ## Setup Instructions
-1. Install Node.js and npm.
-2. Clone this repository.
-3. Navigate to the project folder.
-4. Run `npm install` to install dependencies.
-5. Run `npm run dev` to start the development server.
+1. Open the live website: https://aipa-productivity.lovable.app
+2. To view or continue developing the project, open it in the Lovable editor.
+3. To access the source code, visit the GitHub repository.
 
 ## Development
 This project was built using Lovable. Changes made through Lovable are synchronised with the connected GitHub repository.
