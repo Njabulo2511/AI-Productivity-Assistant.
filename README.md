@@ -1,26 +1,30 @@
-# Aipa Productivity
+# AIPA Productivity
 
-Implement exactly the screenshot and nothing else
+## Project Overview
+AIPA Productivity is an AI-powered productivity website designed to help users manage tasks and improve their productivity.
 
-This project was built with [Lovable](https://lovable.dev).
+**Live Website:** https://aipa-productivity.lovable.app
 
-**Live app**: https://aipa-productivity.lovable.app
+## Features
+- AI Assistant
+- Email Generator
+- Meeting Notes Summarizer
+- Task Planner
+- Research Assistant
+- Task and Deadline Overview
 
-## Build with Lovable
+## Tools Used
+- Lovable
+- GitHub
+- AI integration
+- Node.js and npm
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/ae042453-d358-47b9-aa61-c60121330f73).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Setup Instructions
+1. Install Node.js and npm.
+2. Clone this repository.
+3. Navigate to the project folder.
+4. Run `npm install` to install dependencies.
+5. Run `npm run dev` to start the development server.
 
 ## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+This project was built using Lovable. Changes made through Lovable are synchronised with the connected GitHub repository.
