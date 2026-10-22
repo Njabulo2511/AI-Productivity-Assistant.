@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTitle, SheetDescription } from "@/components/
 import { Button } from "@/components/ui/button";
 import { ChatView } from "./ChatView";
 import { AipaMark } from "./bits";
+import { QuickOverview } from "./QuickOverview";
 import { cn } from "@/lib/utils";
 
 const NAV = [
@@ -16,10 +17,10 @@ const NAV = [
   { to: "/workspace", label: "My Workspace", icon: FolderHeart },
 ] as const;
 
-const Ctx = createContext<{ openAssistant: () => void; openOverview: () => void; setOverviewNode: (n: ReactNode) => void }>({
+const Ctx = createContext<{ openAssistant: () => void; openOverview: () => void }>({
   openAssistant: () => {},
   openOverview: () => {},
-  setOverviewNode: () => {},
+
 });
 export const useShell = () => useContext(Ctx);
 
@@ -27,10 +28,10 @@ export function AppShell({ children }: { children: ReactNode }) {
   const [nav, setNav] = useState(false);
   const [assistant, setAssistant] = useState(false);
   const [overview, setOverview] = useState(false);
-  const [overviewNode, setOverviewNode] = useState<ReactNode>(null);
+  
 
   return (
-    <Ctx.Provider value={{ openAssistant: () => setAssistant(true), openOverview: () => setOverview(true), setOverviewNode }}>
+    <Ctx.Provider value={{ openAssistant: () => setAssistant(true), openOverview: () => setOverview(true) }}>
       <div className="flex min-h-screen flex-col">
         <header className="sticky top-0 z-30 flex h-14 items-center gap-3 border-b bg-background/85 px-3 backdrop-blur md:px-5">
           <Button variant="ghost" size="icon" onClick={() => setNav(true)} aria-label="Open menu">
@@ -86,7 +87,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           <SheetContent side="right" className="w-80 overflow-y-auto p-0">
             <SheetTitle className="sr-only">Quick overview</SheetTitle>
             <SheetDescription className="sr-only">Today's tasks and deadlines</SheetDescription>
-            {overviewNode}
+            <QuickOverview />
           </SheetContent>
         </Sheet>
 
