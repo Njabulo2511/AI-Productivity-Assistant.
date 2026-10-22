@@ -6,7 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { addTasks, type Priority } from "@/lib/store";
 import { toast } from "sonner";
 
-export type Suggestion = { title: string; priority?: Priority; due?: string };
+export type Suggestion = { title: string; priority?: Priority | undefined; due?: string | undefined };
 
 export function TaskSuggestions({
   open,

@@ -60,7 +60,7 @@ export type Task = {
   id: string;
   title: string;
   priority: Priority;
-  due?: string; // YYYY-MM-DD
+  due?: string | undefined; // YYYY-MM-DD
   done: boolean;
   createdAt: number;
 };
@@ -92,7 +92,7 @@ export function saveItem(item: Omit<SavedItem, "id" | "createdAt">) {
 }
 
 /* ---------- Chat threads ---------- */
-export type ChatMsg = { id: string; role: "user" | "assistant"; content: string; error?: boolean };
+export type ChatMsg = { id: string; role: "user" | "assistant"; content: string; error?: boolean | undefined };
 export type Thread = { id: string; title: string; updatedAt: number; messages: ChatMsg[] };
 export const threadsStore = createStore<Thread[]>("aipa.threads", []);
 export const activeThreadStore = createStore<string | null>("aipa.activeThread", null);

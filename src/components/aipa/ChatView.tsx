@@ -50,7 +50,10 @@ export function ChatView({ compact = false, autoFocus = true }: { compact?: bool
     setExtracting(id);
     const r = await extractTasks(content);
     setExtracting(null);
-    if (r.error) return toast.error(r.error);
+    if (r.error) {
+      toast.error(r.error);
+      return;
+    }
     setSugg(r.tasks!);
     setSuggOpen(true);
   };
